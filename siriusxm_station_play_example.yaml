@@ -1,0 +1,21 @@
+# siriusxm_station_play_example.yaml
+# Example automation to play a SiriusXM station on an Alexa device
+
+automation:
+  - id: siriusxm_the_spectrum_toggle
+    alias: The Spectrum Toggle
+    description: Plays The Spectrum on an Alexa device when its input_boolean is toggled on.
+    trigger:
+      - platform: state
+        entity_id: input_boolean.the_spectrum
+        from: "off"
+        to: "on"
+    condition: []
+    action:
+      - service: media_player.play_media
+        target:
+          entity_id: media_player.alexa_device
+        data:
+          media_content_type: SIRIUSXM
+          media_content_id: '"the spectrum"'
+    mode: single
