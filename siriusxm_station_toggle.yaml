@@ -1,0 +1,96 @@
+# siriusxm_station_toggle.yaml
+# Automation to ensure only one SiriusXM station's input_boolean is on
+
+automation:
+  - id: siriusxm_station_toggle
+    alias: Turn Off Other SiriusXM Stations
+    description: When a station is toggled on, turn off the previously active station.
+    trigger:
+      - platform: state
+        entity_id:
+          - input_boolean.the_spectrum
+          - input_boolean.classic_vinyl
+          - input_boolean.classic_rewind
+          - input_boolean.grateful_dead
+          - input_boolean.yacht_rock
+          - input_boolean.lithium
+          - input_boolean.alt_nation
+          - input_boolean.hair_nation
+          - input_boolean.ozzy_s_boneyard
+          - input_boolean.turbo
+        from: "off"
+        to: "on"
+    condition: []
+    action:
+      - choose:
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.the_spectrum', 'on') and trigger.entity_id != 'input_boolean.the_spectrum' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.the_spectrum
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.classic_vinyl', 'on') and trigger.entity_id != 'input_boolean.classic_vinyl' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.classic_vinyl
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.classic_rewind', 'on') and trigger.entity_id != 'input_boolean.classic_rewind' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.classic_rewind
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.grateful_dead', 'on') and trigger.entity_id != 'input_boolean.grateful_dead' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.grateful_dead
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.yacht_rock', 'on') and trigger.entity_id != 'input_boolean.yacht_rock' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.yacht_rock
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.lithium', 'on') and trigger.entity_id != 'input_boolean.lithium' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.lithium
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.alt_nation', 'on') and trigger.entity_id != 'input_boolean.alt_nation' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.alt_nation
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.hair_nation', 'on') and trigger.entity_id != 'input_boolean.hair_nation' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.hair_nation
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.ozzy_s_boneyard', 'on') and trigger.entity_id != 'input_boolean.ozzy_s_boneyard' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.ozzy_s_boneyard
+          - conditions:
+              - condition: template
+                value_template: "{{ is_state('input_boolean.turbo', 'on') and trigger.entity_id != 'input_boolean.turbo' }}"
+            sequence:
+              - service: input_boolean.turn_off
+                target:
+                  entity_id: input_boolean.turbo
+    mode: single
