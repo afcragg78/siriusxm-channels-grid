@@ -1,0 +1,161 @@
+# siriusxm_channels_grid.yaml
+# Lovelace configuration for a 10-card grid of SiriusXM channels
+
+type: grid
+columns: 5
+square: false
+cards:
+  - type: picture-entity
+    entity: input_boolean.the_spectrum
+    image: https://example.ui.nabu.casa/local/pictures/TheSpectrum.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/TheSpectrum.png
+      off: https://example.ui.nabu.casa/local/pictures/TheSpectrum.png
+    style: |
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
+  - type: picture-entity
+    entity: input_boolean.classic_vinyl
+    image: https://example.ui.nabu.casa/local/pictures/ClassicVinyl.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/ClassicVinyl.png
+      off: https://example.ui.nabu.casa/local/pictures/ClassicVinyl.png
+    style: &style
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
+  - type: picture-entity
+    entity: input_boolean.classic_rewind
+    image: https://example.ui.nabu.casa/local/pictures/ClassicRewind.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/ClassicRewind.png
+      off: https://example.ui.nabu.casa/local/pictures/ClassicRewind.png
+    style: *style
+  - type: picture-entity
+    entity: input_boolean.grateful_dead
+    image: https://example.ui.nabu.casa/local/pictures/GratefulDead.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/GratefulDead.png
+      off: https://example.ui.nabu.casa/local/pictures/GratefulDead.png
+    style: *style
+  - type: picture-entity
+    entity: input_boolean.yacht_rock
+    image: https://example.ui.nabu.casa/local/pictures/YachtRock.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/YachtRock.png
+      off: https://example.ui.nabu.casa/local/pictures/YachtRock.png
+    style: *style
+  - type: picture-entity
+    entity: input_boolean.lithium
+    image: https://example.ui.nabu.casa/local/pictures/Lithium.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/Lithium.png
+      off: https://example.ui.nabu.casa/local/pictures/Lithium.png
+    style: *style
+  - type: picture-entity
+    entity: input_boolean.alt_nation
+    image: https://example.ui.nabu.casa/local/pictures/ALTNation.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/ALTNation.png
+      off: https://example.ui.nabu.casa/local/pictures/ALTNation.png
+    style: *style
+  - type: picture-entity
+    entity: input_boolean.hair_nation
+    image: https://example.ui.nabu.casa/local/pictures/HairNation.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/HairNation.png
+      off: https://example.ui.nabu.casa/local/pictures/HairNation.png
+    style: *style
+  - type: picture-entity
+    entity: input_boolean.ozzy_s_boneyard
+    image: https://example.ui.nabu.casa/local/pictures/OzzysBoneyard.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/OzzysBoneyard.png
+      off: https://example.ui.nabu.casa/local/pictures/OzzysBoneyard.png
+    style: *style
+  - type: picture-entity
+    entity: input_boolean.turbo
+    image: https://example.ui.nabu.casa/local/pictures/Turbo.png
+    show_name: false
+    show_state: false
+    tap_action:
+      action: toggle
+    state_image:
+      on: https://example.ui.nabu.casa/local/pictures/Turbo.png
+      off: https://example.ui.nabu.casa/local/pictures/Turbo.png
+    style: *style
