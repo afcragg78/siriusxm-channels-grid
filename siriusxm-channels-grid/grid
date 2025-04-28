@@ -1,0 +1,17 @@
+siriusxm-channels-grid/
+├── siriusxm_channels_grid.yaml           # Lovelace grid with picture-entity cards
+├── siriusxm_station_toggle.yaml          # Mutual exclusivity automation
+├── siriusxm_station_play_example.yaml    # Alexa playback example
+├── siriusxm_native_example.yaml          # Native SiriusXM playback
+├── siriusxm_google_home_example.yaml     # Google Home playback
+├── siriusxm_alexa_voice_example.yaml     # Alexa voice command playback
+├── siriusxm_play_script.yaml             # Reusable playback script
+├── siriusxm_script_example.yaml          # Example using the script
+├── siriusxm_button_grid_example.yaml     # Lovelace grid with button cards
+├── README.md                             # Setup instructions
+├── LICENSE                               # MIT License
+├── screenshots/                          # Screenshots
+│   └── siriusxm_grid.png                 # Grid screenshot
+├── images/                               # Optional: Sample images
+│   ├── TheSpectrum.png                   # Example image
+│   └── ClassicVinyl.png                  # Example image
