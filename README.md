@@ -1,9 +1,9 @@
-
 # SiriusXM Channels Grid for Home Assistant
 
 This repository provides a Home Assistant Lovelace configuration for a 5-column grid of 10 SiriusXM channel cards, plus automations to manage station selection and playback. Each card toggles an `input_boolean` and shows a green border/glow when active. Example automations and scripts demonstrate playing stations via Amazon Alexa, native SiriusXM, Google Home, voice commands, and more.
 
-![Screenshot](screenshots/siriusxm_grid.png)
+## Screenshots
+![SiriusXM Grid](screenshots/siriusxm_grid.png "Lovelace grid with picture-entity cards")
 
 ## Features
 - **10-Channel Grid**: Displays channels (The Spectrum, Classic Vinyl, etc.) in a 5x2 grid.
@@ -80,8 +80,8 @@ This repository provides a Home Assistant Lovelace configuration for a 5-column 
 3. Test by toggling cards; only one should be active.
 
 ### Step 5: Add Playback Automations (Optional)
-1. Choose a playback method based on your setup:
-   - **Alexa**: Use `siriusxm_station_play_example.yaml` as a template for each station.
+1. Choose a playback method:
+   - **Alexa**: Use `siriusxm_station_play_example.yaml` as a template.
    - **Native SiriusXM**: Use `siriusxm_native_example.yaml`.
    - **Google Home**: Use `siriusxm_google_home_example.yaml`.
    - **Alexa Voice**: Use `siriusxm_alexa_voice_example.yaml`.
@@ -90,7 +90,7 @@ This repository provides a Home Assistant Lovelace configuration for a 5-column 
 3. Add to Home Assistant:
    - **UI**: Paste into new automations.
    - **File-Based**: Append to `automations.yaml` or `scripts.yaml`, reload.
-4. Test playback on your device.
+4. Test playback.
 
 ### Step 6: Test
 1. Check dashboard:
@@ -100,32 +100,30 @@ This repository provides a Home Assistant Lovelace configuration for a 5-column 
 3. Verify playback for your chosen method.
 
 ## Playing SiriusXM Stations with Amazon Alexa
-This setup uses the **Alexa Media Player** integration to play SiriusXM stations. Tapping a card toggles its `input_boolean` to `on`, triggering an automation (e.g., `siriusxm_station_play_example.yaml`) that sends a `media_player.play_media` command to an Alexa device (e.g., Echo, Fire TV Cube). The command specifies the station (e.g., `"the spectrum"`) and `media_content_type: SIRIUSXM`. The `siriusxm_station_toggle.yaml` automation ensures only one station is active in the UI.
+This setup uses the **Alexa Media Player** integration to play SiriusXM stations. Tapping a card toggles its `input_boolean` to `on`, triggering an automation (e.g., `siriusxm_station_play_example.yaml`) that sends a `media_player.play_media` command to an Alexa device. The command specifies the station (e.g., `"the spectrum"`) and `media_content_type: SIRIUSXM`. The `siriusxm_station_toggle.yaml` ensures one station is active in the UI.
 
 To set this up:
 1. Install **Alexa Media Player** via **Settings > Devices & Services > Add Integration**.
 2. Link your Alexa account and discover devices (e.g., `media_player.your_alexa`).
 3. Create an automation per station, using `siriusxm_station_play_example.yaml`.
-4. Link your SiriusXM account to Alexa for playback.
+4. Link your SiriusXM account to Alexa.
 
 ## Alternative Playback Methods
-The repository includes examples for triggering SiriusXM stations in different ways:
+The repository includes examples for triggering SiriusXM stations:
 
 1. **Native SiriusXM Integration** (`siriusxm_native_example.yaml`):
-   - Uses `media_player.select_source` to select a channel on a SiriusXM media player.
-   - Requires a SiriusXM integration (e.g., via HACS).
+   - Uses `media_player.select_source` for a SiriusXM media player.
+   - Requires a SiriusXM integration.
 2. **Google Home** (`siriusxm_google_home_example.yaml`):
-   - Plays stations on a Google Home device via `media_player.play_media`.
-   - Requires Google Assistant integration and SiriusXM account linkage.
+   - Plays stations on Google Home via `media_player.play_media`.
+   - Requires Google Assistant and SiriusXM linkage.
 3. **Alexa Voice Commands** (`siriusxm_alexa_voice_example.yaml`):
-   - Triggers `input_boolean` via custom Alexa intents (e.g., “Alexa, play The Spectrum”).
-   - Requires an Alexa skill and routine setup.
+   - Triggers `input_boolean` via Alexa intents (e.g., “Alexa, play The Spectrum”).
+   - Requires an Alexa skill and routine.
 4. **Reusable Script** (`siriusxm_play_script.yaml`, `siriusxm_script_example.yaml`):
-   - Defines a script to play any station, called by automations or buttons.
-   - Flexible for multiple devices or stations.
+   - Script to play any station, called by automations or buttons.
 5. **Button Cards** (`siriusxm_button_grid_example.yaml`):
-   - Alternative Lovelace grid with `button` cards for direct playback, bypassing `input_boolean`.
-   - Simplifies setup but loses visual state tracking.
+   - Lovelace grid with `button` cards for direct playback, bypassing `input_boolean`.
 
 ## Troubleshooting
 - **Cards Not Displaying**:
@@ -134,12 +132,15 @@ The repository includes examples for triggering SiriusXM stations in different w
 - **Images Not Loading**:
   - Verify URLs or local files in `<config_dir>/www/pictures/`.
   - Check permissions.
+- **Screenshots Not Displaying**:
+  - Confirm `screenshots/siriusxm_grid.png` exists in the repository.
+  - Use raw URLs if relative paths fail (e.g., `https://raw.githubusercontent.com/your-username/siriusxm-channels-grid/main/screenshots/siriusxm_grid.png`).
 - **Automation Not Working**:
-  - Confirm `input_boolean` or media player entity IDs.
+  - Confirm entity IDs.
   - Test in **Developer Tools > States**.
 - **Playback Issues**:
-  - Verify integration (Alexa, SiriusXM, Google) and account linkage.
-  - Ensure `media_content_id` matches expected format (e.g., lowercase).
+  - Verify integration and account linkage.
+  - Ensure `media_content_id` matches expected format.
 - **YAML Errors**:
   - Validate at [yaml-online-parser](https://yaml-online-parser.appspot.com/).
   - Use 2-space indentation.
@@ -148,7 +149,7 @@ The repository includes examples for triggering SiriusXM stations in different w
 ## Customization
 - **Add Channels**: Copy a card, update `entity` and `image`. Add to `siriusxm_station_toggle.yaml` and create a playback automation.
 - **Styling**: Modify `style` in `siriusxm_channels_grid.yaml`.
-- **Playback**: Combine multiple methods (e.g., Alexa and SiriusXM).
+- **Playback**: Combine methods (e.g., Alexa and voice commands).
 
 ## Contributing
 Fork, create a branch, make changes, submit a pull request.
