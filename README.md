@@ -3,7 +3,7 @@
 This repository provides a Home Assistant Lovelace configuration for a 5-column grid of 10 SiriusXM channel cards, plus automations to manage station selection and playback. Each card toggles an `input_boolean` and shows a green border/glow when active. Example automations and scripts demonstrate playing stations via Amazon Alexa, native SiriusXM, Google Home, voice commands, and more.
 
 ## Screenshots
-![SiriusXM Grid](screenshots/siriusxm_grid.png "Lovelace grid with picture-entity cards")
+![SiriusXM Grid](screenshots/Screenshot_20250428_044625_Home Assistant.jpg "Lovelace grid with picture-entity cards")
 
 ## Features
 - **10-Channel Grid**: Displays channels (The Spectrum, Classic Vinyl, etc.) in a 5x2 grid.
