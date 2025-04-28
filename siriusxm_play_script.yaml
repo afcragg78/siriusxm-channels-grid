@@ -1,0 +1,21 @@
+# siriusxm_play_script.yaml
+# Reusable script to play a SiriusXM station
+
+script:
+  play_siriusxm_station:
+    alias: Play SiriusXM Station
+    description: Plays a specified SiriusXM station on a media player.
+    fields:
+      station:
+        description: The SiriusXM station name (e.g., "the spectrum").
+        example: "the spectrum"
+      media_player:
+        description: The media player entity ID.
+        example: "media_player.alexa_device"
+    sequence:
+      - service: media_player.play_media
+        target:
+          entity_id: "{{ media_player }}"
+        data:
+          media_content_type: SIRIUSXM
+          media_content_id: "{{ station }}"
