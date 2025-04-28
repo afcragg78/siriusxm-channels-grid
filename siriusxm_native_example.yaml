@@ -1,0 +1,20 @@
+# siriusxm_native_example.yaml
+# Example automation to play a SiriusXM station using a native integration
+
+automation:
+  - id: siriusxm_native_the_spectrum
+    alias: Play The Spectrum via SiriusXM
+    description: Selects The Spectrum on a SiriusXM media player when toggled.
+    trigger:
+      - platform: state
+        entity_id: input_boolean.the_spectrum
+        from: "off"
+        to: "on"
+    condition: []
+    action:
+      - service: media_player.select_source
+        target:
+          entity_id: media_player.siriusxm
+        data:
+          source: "The Spectrum"
+    mode: single
