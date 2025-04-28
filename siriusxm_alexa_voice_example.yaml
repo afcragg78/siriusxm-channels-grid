@@ -1,0 +1,18 @@
+# siriusxm_alexa_voice_example.yaml
+# Example automation to toggle a SiriusXM station via Alexa voice command
+
+automation:
+  - id: siriusxm_voice_the_spectrum
+    alias: Voice Toggle The Spectrum
+    description: Toggles The Spectrum input_boolean via an Alexa voice command.
+    trigger:
+      - platform: event
+        event_type: alexa_intent
+        event_data:
+          intent: "PlayTheSpectrum"
+    condition: []
+    action:
+      - service: input_boolean.turn_on
+        target:
+          entity_id: input_boolean.the_spectrum
+    mode: single
