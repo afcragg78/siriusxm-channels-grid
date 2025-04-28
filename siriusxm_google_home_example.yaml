@@ -1,0 +1,21 @@
+# siriusxm_google_home_example.yaml
+# Example automation to play a SiriusXM station on Google Home
+
+automation:
+  - id: siriusxm_google_classic_vinyl
+    alias: Play Classic Vinyl on Google Home
+    description: Plays Classic Vinyl on a Google Home device when toggled.
+    trigger:
+      - platform: state
+        entity_id: input_boolean.classic_vinyl
+        from: "off"
+        to: "on"
+    condition: []
+    action:
+      - service: media_player.play_media
+        target:
+          entity_id: media_player.google_home
+        data:
+          media_content_type: music
+          media_content_id: "Classic Vinyl on SiriusXM"
+    mode: single
