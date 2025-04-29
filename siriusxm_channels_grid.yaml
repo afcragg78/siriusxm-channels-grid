@@ -48,7 +48,7 @@ cards:
     state_image:
       on: https://your-instance.ui.nabu.casa/local/pictures/ClassicVinyl.png
       off: https://your-instance.ui.nabu.casa/local/pictures/ClassicVinyl.png
-    style: &style
+    style: |
       ha-card {
         height: 80px !important;
         width: 80px !important;
@@ -81,7 +81,29 @@ cards:
     state_image:
       on: https://your-instance.ui.nabu.casa/local/pictures/ClassicRewind.png
       off: https://your-instance.ui.nabu.casa/local/pictures/ClassicRewind.png
-    style: *style
+    style: |
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
   - type: picture-entity
     entity: input_boolean.grateful_dead
     image: https://your-instance.ui.nabu.casa/local/pictures/GratefulDead.png
@@ -92,7 +114,29 @@ cards:
     state_image:
       on: https://your-instance.ui.nabu.casa/local/pictures/GratefulDead.png
       off: https://your-instance.ui.nabu.casa/local/pictures/GratefulDead.png
-    style: *style
+    style: |
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
   - type: picture-entity
     entity: input_boolean.yacht_rock
     image: https://your-instance.ui.nabu.casa/local/pictures/YachtRock.png
@@ -103,7 +147,29 @@ cards:
     state_image:
       on: https://your-instance.ui.nabu.casa/local/pictures/YachtRock.png
       off: https://your-instance.ui.nabu.casa/local/pictures/YachtRock.png
-    style: *style
+    style: |
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
   - type: picture-entity
     entity: input_boolean.lithium
     image: https://your-instance.ui.nabu.casa/local/pictures/Lithium.png
@@ -114,7 +180,29 @@ cards:
     state_image:
       on: https://your-instance.ui.nabu.casa/local/pictures/Lithium.png
       off: https://your-instance.ui.nabu.casa/local/pictures/Lithium.png
-    style: *style
+    style: |
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
   - type: picture-entity
     entity: input_boolean.alt_nation
     image: https://your-instance.ui.nabu.casa/local/pictures/ALTNation.png
@@ -125,7 +213,29 @@ cards:
     state_image:
       on: https://your-instance.ui.nabu.casa/local/pictures/ALTNation.png
       off: https://your-instance.ui.nabu.casa/local/pictures/ALTNation.png
-    style: *style
+    style: |
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
   - type: picture-entity
     entity: input_boolean.hair_nation
     image: https://your-instance.ui.nabu.casa/local/pictures/HairNation.png
@@ -136,7 +246,29 @@ cards:
     state_image:
       on: https://your-instance.ui.nabu.casa/local/pictures/HairNation.png
       off: https://your-instance.ui.nabu.casa/local/pictures/HairNation.png
-    style: *style
+    style: |
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
   - type: picture-entity
     entity: input_boolean.ozzy_s_boneyard
     image: https://your-instance.ui.nabu.casa/local/pictures/OzzysBoneyard.png
@@ -147,7 +279,29 @@ cards:
     state_image:
       on: https://your-instance.ui.nabu.casa/local/pictures/OzzysBoneyard.png
       off: https://your-instance.ui.nabu.casa/local/pictures/OzzysBoneyard.png
-    style: *style
+    style: |
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
   - type: picture-entity
     entity: input_boolean.turbo
     image: https://your-instance.ui.nabu.casa/local/pictures/Turbo.png
@@ -158,4 +312,26 @@ cards:
     state_image:
       on: https://your-instance.ui.nabu.casa/local/pictures/Turbo.png
       off: https://your-instance.ui.nabu.casa/local/pictures/Turbo.png
-    style: *style
+    style: |
+      ha-card {
+        height: 80px !important;
+        width: 80px !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+        border-radius: 10px;
+        margin: 5px;
+        box-shadow: none;
+      }
+      ha-card[state='on'] {
+        border: 2px solid #00ff00;
+        opacity: 1;
+        filter: brightness(1.2);
+        box-shadow: 0 0 10px 5px #ADD8E6 !important;
+      }
+      ha-card[state='off'] {
+        border: 2px solid transparent;
+        opacity: 0.7;
+        filter: brightness(0.8);
+        box-shadow: none !important;
+      }
