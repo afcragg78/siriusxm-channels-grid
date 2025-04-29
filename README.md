@@ -25,7 +25,7 @@ This repository provides a Home Assistant Lovelace configuration for a 5-column 
 
 ## Prerequisites
 - **Home Assistant**: Version 2023.6 or later.
-- **Image Files**: PNG/JPG images, hosted locally (`<config_dir>/www/pictures/`) or externally.
+- **Image Files**: PNG/JPG images, hosted locally (`<config_dir>/www/pictures/`) or via Nabu Casa.
 - **Input Boolean Helpers**: One per channel (e.g., `input_boolean.the_spectrum`).
 - **Optional for Playback**:
   - **Alexa**: Alexa Media Player integration.
@@ -51,15 +51,16 @@ This repository provides a Home Assistant Lovelace configuration for a 5-column 
 3. Verify entity IDs in **Entities**.
 
 ### Step 2: Add Image Files
-1. The YAML uses placeholder URLs (e.g., `https://example.ui.nabu.casa/local/pictures/TheSpectrum.png`).
-2. Replace with your paths:
-   - **Local**: Place images in `<config_dir>/www/pictures/` (e.g., `/config/www/pictures/TheSpectrum.png`) and use `/local/pictures/TheSpectrum.png`.
-   - **External**: Use accessible URLs (e.g., Nabu Casa).
-3. Ensure filenames match and images are PNG/JPG.
+1. The YAML uses Nabu Casa URLs (e.g., `https://your-instance.ui.nabu.casa/local/pictures/TheSpectrum.png`).
+2. Replace `your-instance` with your Nabu Casa instance ID (e.g., `a1b2c3d4`).
+3. Host images:
+   - **Local**: Place in `<config_dir>/www/pictures/` (e.g., `/config/www/pictures/TheSpectrum.png`) and access via `/local/pictures/TheSpectrum.png`.
+   - **Nabu Casa**: Ensure images are in the `www/pictures/` directory of your Home Assistant instance.
+4. Ensure filenames match (e.g., `TheSpectrum.png`) and images are PNG/JPG.
 
 ### Step 3: Add the Grid to Your Dashboard
 1. Download `siriusxm_channels_grid.yaml`.
-2. Update image URLs.
+2. Update image URLs with your Nabu Casa instance ID.
 3. Add to Lovelace:
    - **Visual Editor**: **Edit Dashboard > Add Card > Manual**, paste YAML, save.
    - **YAML Mode**: Append to `cards` in **Raw Configuration Editor**:
@@ -95,7 +96,7 @@ This repository provides a Home Assistant Lovelace configuration for a 5-column 
 ### Step 6: Test
 1. Check dashboard:
    - Cards display images and toggle `input_boolean` (or play directly with button cards).
-   - Active card shows green border/glow; others are dimmed.
+   - All cards show consistent styling (80x80px, green border/glow when `on`, dimmed when `off`).
 2. Toggle cards to confirm one `input_boolean` is `on`.
 3. Verify playback for your chosen method.
 
@@ -129,12 +130,16 @@ The repository includes examples for triggering SiriusXM stations:
 - **Cards Not Displaying**:
   - Ensure `input_boolean` entities exist (for `picture-entity`).
   - Check logs (**Settings > System > Logs**).
+- **Inconsistent Card Styling**:
+  - Verify `style` blocks in `siriusxm_channels_grid.yaml` are identical for all cards.
+  - Clear Lovelace cache: **Settings > Dashboards > More > Clear Cache**, or restart Home Assistant.
+  - Test in a different browser or incognito mode to rule out browser caching.
 - **Images Not Loading**:
-  - Verify URLs or local files in `<config_dir>/www/pictures/`.
-  - Check permissions.
+  - Verify Nabu Casa URLs and files in `<config_dir>/ww/pictures/`.
+  - Check permissions and instance ID.
 - **Screenshots Not Displaying**:
-  - Confirm `screenshots/siriusxm_grid.png` exists in the repository.
-  - Use raw URLs if relative paths fail (e.g., `https://raw.githubusercontent.com/your-username/siriusxm-channels-grid/main/screenshots/siriusxm_grid.png`).
+  - Confirm `screenshots/siriusxm_grid.png` exists.
+  - Use raw URLs if needed (e.g., `https://raw.githubusercontent.com/your-username/siriusxm-channels-grid/main/screenshots/siriusxm_grid.png`).
 - **Automation Not Working**:
   - Confirm entity IDs.
   - Test in **Developer Tools > States**.
