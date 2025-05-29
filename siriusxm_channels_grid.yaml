@@ -1,337 +1,777 @@
 # siriusxm_channels_grid.yaml
 # Lovelace configuration for a 10-card grid of SiriusXM channels
 
-type: grid
-columns: 5
-square: false
+type: vertical-stack
 cards:
-  - type: picture-entity
-    entity: input_boolean.the_spectrum
-    image: https://your-instance.ui.nabu.casa/local/pictures/TheSpectrum.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/TheSpectrum.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/TheSpectrum.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
-  - type: picture-entity
-    entity: input_boolean.classic_vinyl
-    image: https://your-instance.ui.nabu.casa/local/pictures/ClassicVinyl.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/ClassicVinyl.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/ClassicVinyl.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
-  - type: picture-entity
-    entity: input_boolean.classic_rewind
-    image: https://your-instance.ui.nabu.casa/local/pictures/ClassicRewind.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/ClassicRewind.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/ClassicRewind.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
-  - type: picture-entity
-    entity: input_boolean.grateful_dead
-    image: https://your-instance.ui.nabu.casa/local/pictures/GratefulDead.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/GratefulDead.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/GratefulDead.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
-  - type: picture-entity
-    entity: input_boolean.yacht_rock
-    image: https://your-instance.ui.nabu.casa/local/pictures/YachtRock.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/YachtRock.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/YachtRock.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
-  - type: picture-entity
-    entity: input_boolean.lithium
-    image: https://your-instance.ui.nabu.casa/local/pictures/Lithium.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/Lithium.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/Lithium.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
-  - type: picture-entity
-    entity: input_boolean.alt_nation
-    image: https://your-instance.ui.nabu.casa/local/pictures/ALTNation.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/ALTNation.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/ALTNation.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
-  - type: picture-entity
-    entity: input_boolean.hair_nation
-    image: https://your-instance.ui.nabu.casa/local/pictures/HairNation.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/HairNation.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/HairNation.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
-  - type: picture-entity
-    entity: input_boolean.ozzy_s_boneyard
-    image: https://your-instance.ui.nabu.casa/local/pictures/OzzysBoneyard.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/OzzysBoneyard.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/OzzysBoneyard.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
-  - type: picture-entity
-    entity: input_boolean.turbo
-    image: https://your-instance.ui.nabu.casa/local/pictures/Turbo.png
-    show_name: false
-    show_state: false
-    tap_action:
-      action: toggle
-    state_image:
-      on: https://your-instance.ui.nabu.casa/local/pictures/Turbo.png
-      off: https://your-instance.ui.nabu.casa/local/pictures/Turbo.png
-    style: |
-      ha-card {
-        height: 80px !important;
-        width: 80px !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        border-radius: 10px;
-        margin: 5px;
-        box-shadow: none;
-      }
-      ha-card[state='on'] {
-        border: 2px solid #00ff00;
-        opacity: 1;
-        filter: brightness(1.2);
-        box-shadow: 0 0 10px 5px #ADD8E6 !important;
-      }
-      ha-card[state='off'] {
-        border: 2px solid transparent;
-        opacity: 0.7;
-        filter: brightness(0.8);
-        box-shadow: none !important;
-      }
+  - type: grid
+    square: true
+    columns: 5
+    cards:
+      - type: picture-entity
+        entity: input_boolean.classic_rewind
+        image: /local/pictures/ClassicRewind.png
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/ClassicRewind.png
+          "off": /local/pictures/ClassicRewind.png
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+      - type: picture-entity
+        entity: input_boolean.classic_vinyl
+        image: /local/pictures/ClassicVinyl.png
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/ClassicVinyl.png
+          "off": /local/pictures/ClassicVinyl.png
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+      - type: picture-entity
+        entity: input_boolean.grateful_dead
+        image: /local/pictures/GratefulDead.png
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/GratefulDead.png
+          "off": /local/pictures/GratefulDead.png
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+      - type: picture-entity
+        entity: input_boolean.lithium
+        image: /local/pictures/Lithium.png
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/Lithium.png
+          "off": /local/pictures/Lithium.png
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+      - type: picture-entity
+        entity: input_boolean.octane
+        image: /local/pictures/Octane.png
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/Octane.png
+          "off": /local/pictures/Octane.png
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+      - type: picture-entity
+        entity: input_boolean.liquid_metal
+        image: /local/pictures/LiquidMetal.png
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/LiquidMetal.png
+          "off": /local/pictures/LiquidMetal.png
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+      - type: picture-entity
+        entity: input_boolean.ozzy_s_boneyard
+        image: /local/pictures/OzzysBoneyard.png
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/OzzysBoneyard.png
+          "off": /local/pictures/OzzysBoneyard.png
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+      - type: picture-entity
+        entity: input_boolean.bb_kings
+        image: /local/pictures/BBKings.png
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/BBKings.png
+          "off": /local/pictures/BBKings.png
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+      - type: picture-entity
+        entity: input_boolean.yacht_rock
+        image: /local/pictures/YachtRock1.png
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/YachtRock1.png
+          "off": /local/pictures/YachtRock1.png
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+      - type: picture-entity
+        entity: input_boolean.show_more_stations
+        image: /local/pictures/Stations.jpg
+        show_name: false
+        show_state: false
+        tap_action:
+          action: toggle
+        state_image:
+          "on": /local/pictures/Stations.jpg
+          "off": /local/pictures/Stations.jpg
+        card_mod:
+          style: |
+            :host {
+              --ha-card-height: 80px;
+              --ha-card-width: 80px;
+              min-height: 80px;
+              min-width: 80px;
+              max-height: 80px;
+              max-width: 80px;
+              aspect-ratio: 1/1;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              border-radius: 10px;
+              margin: 5px;
+              box-shadow: none;
+              display: block;
+              box-sizing: border-box;
+            }
+            :host([state='on']) {
+              border: 2px solid #00ff00;
+              opacity: 1;
+              filter: brightness(1.2);
+              box-shadow: 0 0 10px 5px #ADD8E6;
+            }
+            :host([state='off']) {
+              border: 2px solid transparent;
+              opacity: 0.7;
+              filter: brightness(0.8);
+              box-shadow: none;
+            }
+  - type: conditional
+    conditions:
+      - condition: state
+        entity: input_boolean.show_more_stations
+        state: "on"
+    card:
+      type: grid
+      square: false
+      columns: 5
+      cards:
+        - type: picture-entity
+          entity: input_boolean.hair_nation
+          image: /local/pictures/HairNation.png
+          show_name: false
+          show_state: false
+          tap_action:
+            action: toggle
+          state_image:
+            "on": /local/pictures/HairNation.png
+            "off": /local/pictures/HairNation.png
+          card_mod:
+            style: |
+              :host {
+                --ha-card-height: 80px;
+                --ha-card-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                max-height: 80px;
+                max-width: 80px;
+                aspect-ratio: 1/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                margin: 0;
+                box-shadow: none;
+                display: block;
+                box-sizing: border-box;
+              }
+              :host([state='on']) {
+                border: 2px solid #00ff00;
+                opacity: 1;
+                filter: brightness(1.2);
+                box-shadow: 0 0 10px 3px #ADD8E6;
+              }
+              :host([state='off']) {
+                border: 2px solid transparent;
+                opacity: 0.7;
+                filter: brightness(0.8);
+                box-shadow: none;
+              }
+        - type: picture-entity
+          entity: input_boolean.turbo
+          image: /local/pictures/Turbo.png
+          show_name: false
+          show_state: false
+          tap_action:
+            action: toggle
+          state_image:
+            "on": /local/pictures/Turbo.png
+            "off": /local/pictures/Turbo.png
+          card_mod:
+            style: |
+              :host {
+                --ha-card-height: 80px;
+                --ha-card-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                max-height: 80px;
+                max-width: 80px;
+                aspect-ratio: 1/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                margin: 0;
+                box-shadow: none;
+                display: block;
+                box-sizing: border-box;
+              }
+              :host([state='on']) {
+                border: 2px solid #00ff00;
+                opacity: 1;
+                filter: brightness(1.2);
+                box-shadow: 0 0 10px 3px #ADD8E6;
+              }
+              :host([state='off']) {
+                border: 2px solid transparent;
+                opacity: 0.7;
+                filter: brightness(0.8);
+                box-shadow: none;
+              }
+        - type: picture-entity
+          entity: input_boolean.underground
+          image: /local/pictures/Underground1.png
+          show_name: false
+          show_state: false
+          tap_action:
+            action: toggle
+          state_image:
+            "on": /local/pictures/Underground1.png
+            "off": /local/pictures/Underground1.png
+          card_mod:
+            style: |
+              :host {
+                --ha-card-height: 80px;
+                --ha-card-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                max-height: 80px;
+                max-width: 80px;
+                aspect-ratio: 1/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                margin: 0;
+                box-shadow: none;
+                display: block;
+                box-sizing: border-box;
+              }
+              :host([state='on']) {
+                border: 2px solid #00ff00;
+                opacity: 1;
+                filter: brightness(1.2);
+                box-shadow: 0 0 10px 3px #ADD8E6;
+              }
+              :host([state='off']) {
+                border: 2px solid transparent;
+                opacity: 0.7;
+                filter: brightness(0.8);
+                box-shadow: none;
+              }
+        - type: picture-entity
+          entity: input_boolean.jam_on_2
+          image: /local/pictures/JamON2.png
+          show_name: false
+          show_state: false
+          tap_action:
+            action: toggle
+          state_image:
+            "on": /local/pictures/JamON2.png
+            "off": /local/pictures/JamON2.png
+          card_mod:
+            style: |
+              :host {
+                --ha-card-height: 80px;
+                --ha-card-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                max-height: 80px;
+                max-width: 80px;
+                aspect-ratio: 1/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                margin: 0;
+                box-shadow: none;
+                display: block;
+                box-sizing: border-box;
+              }
+              :host([state='on']) {
+                border: 2px solid #00ff00;
+                opacity: 1;
+                filter: brightness(1.2);
+                box-shadow: 0 0 10px 3px #ADD8E6;
+              }
+              :host([state='off']) {
+                border: 2px solid transparent;
+                opacity: 0.7;
+                filter: brightness(0.8);
+                box-shadow: none;
+              }
+        - type: picture-entity
+          entity: input_boolean.road_trip
+          image: /local/pictures/RoadTrip1.png
+          show_name: false
+          show_state: false
+          tap_action:
+            action: toggle
+          state_image:
+            "on": /local/pictures/RoadTrip1.png
+            "off": /local/pictures/RoadTrip1.png
+          card_mod:
+            style: |
+              :host {
+                --ha-card-height: 80px;
+                --ha-card-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                max-height: 80px;
+                max-width: 80px;
+                aspect-ratio: 1/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                margin: 0;
+                box-shadow: none;
+                display: block;
+                box-sizing: border-box;
+              }
+              :host([state='on']) {
+                border: 2px solid #00ff00;
+                opacity: 1;
+                filter: brightness(1.2);
+                box-shadow: 0 0 10px 3px #ADD8E6;
+              }
+              :host([state='off']) {
+                border: 2px solid transparent;
+                opacity: 0.7;
+                filter: brightness(0.8);
+                box-shadow: none;
+              }
+        - type: picture-entity
+          entity: input_boolean.pearl_jam_radio
+          image: /local/pictures/PearlJamRadio1.png
+          show_name: false
+          show_state: false
+          tap_action:
+            action: toggle
+          state_image:
+            "on": /local/pictures/PearlJamRadio1.png
+            "off": /local/pictures/PearlJamRadio1.png
+          card_mod:
+            style: |
+              :host {
+                --ha-card-height: 80px;
+                --ha-card-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                max-height: 80px;
+                max-width: 80px;
+                aspect-ratio: 1/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                margin: 0;
+                box-shadow: none;
+                display: block;
+                box-sizing: border-box;
+              }
+              :host([state='on']) {
+                border: 2px solid #00ff00;
+                opacity: 1;
+                filter: brightness(1.2);
+                box-shadow: 0 0 10px 3px #ADD8E6;
+              }
+              :host([state='off']) {
+                border: 2px solid transparent;
+                opacity: 0.7;
+                filter: brightness(0.8);
+                box-shadow: none;
+              }
+        - type: picture-entity
+          entity: input_boolean.red_hot_peppers
+          image: /local/pictures/RedHotPeppers.png
+          show_name: false
+          show_state: false
+          tap_action:
+            action: toggle
+          state_image:
+            "on": /local/pictures/RedHotPeppers.png
+            "off": /local/pictures/RedHotPeppers.png
+          card_mod:
+            style: |
+              :host {
+                --ha-card-height: 80px;
+                --ha-card-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                max-height: 80px;
+                max-width: 80px;
+                aspect-ratio: 1/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                margin: 0;
+                box-shadow: none;
+                display: block;
+                box-sizing: border-box;
+              }
+              :host([state='on']) {
+                border: 2px solid #00ff00;
+                opacity: 1;
+                filter: brightness(1.2);
+                box-shadow: 0 0 10px 3px #ADD8E6;
+              }
+              :host([state='off']) {
+                border: 2px solid transparent;
+                opacity: 0.7;
+                filter: brightness(0.8);
+                box-shadow: none;
+              }
+        - type: picture-entity
+          entity: input_boolean.dave_matthews
+          image: /local/pictures/DaveMatthews.png
+          show_name: false
+          show_state: false
+          tap_action:
+            action: toggle
+          state_image:
+            "on": /local/pictures/DaveMatthews.png
+            "off": /local/pictures/DaveMatthews.png
+          card_mod:
+            style: |
+              :host {
+                --ha-card-height: 80px;
+                --ha-card-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                max-height: 80px;
+                max-width: 80px;
+                aspect-ratio: 1/1;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-radius: 10px;
+                margin: 0;
+                box-shadow: none;
+                display: block;
+                box-sizing: border-box;
+              }
+              :host([state='on']) {
+                border: 2px solid #00ff00;
+                opacity: 1;
+                filter: brightness(1.2);
+                box-shadow: 0 0 10px 3px #ADD8E6;
+              }
+              :host([state='off']) {
+                border: 2px solid transparent;
+                opacity: 0.7;
+                filter: brightness(0.8);
+                box-shadow: none;
+              }
+        - type: picture-entity
+          entity: input_boolean.beatles
+          image: /local/pictures/Beatles.png
+          show_name: false
+          show_state: false
+          tap_action:
+            action: toggle
+          state_image:
+            "on": /local/pictures/Beatles.png
+            "off": /local/pictures/Beatles.png
+          card_mod:
+            style: |
+              :host {
+                --ha-card-height: 80px;
+                --ha-card-width: 80px;
+                min-height: 80px;
+                min-width: 80px;
+                max-height: 80px;
+                max-width: 80px;
+                aspect-ratio: 1/1;
